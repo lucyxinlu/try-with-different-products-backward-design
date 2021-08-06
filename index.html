@@ -3,6 +3,25 @@
  <head>
    <meta charset="utf-8">
    <title>Try with different products</title>
+   <script type="text/javascript">
+        function test(){
+            var param="";
+            if(document.getElementById('1').checked)
+                param+=document.getElementById('1').value+",";
+            if(document.getElementById('2').checked)
+                param+=document.getElementById('2').value+",";
+             if(document.getElementById('3').checked)
+                param+=document.getElementById('3').value+",";
+             if(document.getElementById('4').checked)
+                param+=document.getElementById('4').value+",";
+            if(document.getElementById('5').checked)
+                param+=document.getElementById('5').value+",";
+            if(document.getElementById('6').checked)
+                param+=document.getElementById('6').value+",";
+            param = param.substring(0,param.length-1);
+            document.location.href="xxx.jsp?param="+param;
+        }
+    </script>
  </head>
  <body>
    <h1 style="text-align:center;border: 3px solid rgba(206,89,55,0.61);">Try with different products</h1>
@@ -11,10 +30,26 @@
      <li><b>Apply BB cream. </b>BB Cream is an all-in-one cosmetic that acts as a moisturizer, primer, SPF and foundation, reducing the amount of time it takes to put on makeup.</li>
      <li><b>Experiment with contouring.</b> Contouring is a makeup technique that allows you to subtly alter your face shape.</li>
    </ol>
+   <img src="images/product.png" alt="different products"  width="300"  height="300">
+    <p>After reading all the material ,please complete the following questions.</p>
+     <form method="get" action="xxx.asp">
+    <ol>
+        <li>More foundation you use, the better you are.</li>
+        Yes<input type="checkbox" name="ck" value="1" id="1">    
+        No<input type="checkbox" name="ck" value="2" id="2">
+        <li>Which of the following can alter your face shape?</li>
+       <p> Contouring<input type="checkbox" name="ck" value="3" id="3"></p>
+        BB cream<input type="checkbox" name="ck" value="4" id="4">
+        <li>What's the biggest beneficial for users when using BB cream?</li>
+        <p>Reduce time.<input type="checkbox" name="ck" value="5" id="5"></p>
+        <p>It can act as a primer,SPF,ect.<input type="checkbox" name="ck" value="6" id="6"></p>
+        <input type="button" value="提交" onclick="test()">    
+    </form>
+     
    
-   <p style="text-align:left"><a href="https://lucyxinlu.github.io/backward-design/">Home Page</a></p>
+   <p style="text-align:center"><a href="https://lucyxinlu.github.io/backward-design/">Home Page</a></p>
    <p></p>
-   <p style="text-align:right"><a href="https://lucyxinlu.github.io/enhance-your-features-backward-design">Previous</a></p>
+   <p style="text-align:center"><a href="https://lucyxinlu.github.io/enhance-your-features-backward-design">Previous</a></p>
    
  </body>
 </html>
